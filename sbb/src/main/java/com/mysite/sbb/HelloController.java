@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HelloController {
 
     @GetMapping("/")
-    @ResponseBody
-    public String Hello(){
-        return "Hello World";
+    public String root(){
+        return "redirect:/question/list";
     }
 }

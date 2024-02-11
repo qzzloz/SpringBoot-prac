@@ -1,5 +1,6 @@
 package com.mysite.sbb.question;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mysite.sbb.answer.Answer;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -25,6 +26,7 @@ public class Question {
 
     private LocalDateTime createDate;
 
+//    @JsonIgnore
     /* mappedBy: 참조 엔티티의 속성명 정의(Answer 엔티티에서 Question 엔티티를 참조한 속성명인 question을 mappedBy에 전달) */
     @OneToMany(mappedBy = "question", cascade = CascadeType.REMOVE)
     private List<Answer> answerList;

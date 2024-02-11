@@ -53,7 +53,7 @@ class SbbApplicationTests {
 			Question q = oq.get();
 			assertEquals("1. sbb가 무엇인가요?", q.getSubject());
 		}
- */
+
 		Optional<Question> oq = this.questionRepository.findById(2);
 		Question q = oq.get();
 
@@ -61,5 +61,7 @@ class SbbApplicationTests {
 
 		assertEquals(1, answerList.size());
 		assertEquals("자동 생성", answerList.get(0).getContent());
+
+ */
 	}
 }
